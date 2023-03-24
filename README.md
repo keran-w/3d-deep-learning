@@ -1,1 +1,1 @@
-# 3d-deep-learning
+# Deep Learning for 3D models

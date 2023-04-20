@@ -2,4 +2,6 @@
 .vscode
 build
 Dataset
-Dataset/ModelNet40
+Dataset
+Visualizer
+Tests

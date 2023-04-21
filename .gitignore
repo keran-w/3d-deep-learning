@@ -4,5 +4,6 @@
 build
 Tests
 Dataset
+SavedData
 Visualizer
 SavedPretrainedModel

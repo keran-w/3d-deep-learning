@@ -60,7 +60,7 @@ int main(int argc, char** argv)
 	auto file = std::ifstream(argv[1]);
 	std::string head;
 	file >> head;
-	if (head != "OFF")
+	if (!head.starts_with("OFF"))
 	{
 		file.close();
 		std::cerr << "Not an OFF file!" << std::endl;
@@ -69,7 +69,16 @@ int main(int argc, char** argv)
 	auto vertexCount = 0;
 	auto faceCount = 0;
 	auto edgeCount = 0;
-	file >> vertexCount >> faceCount >> edgeCount;
+	// Normal case
+	if (head == "OFF")
+	{
+		file >> vertexCount >> faceCount >> edgeCount;
+	}
+	else
+	{
+		vertexCount = std::stoi(head.substr(3));
+		file >> faceCount >> edgeCount;
+	}
 	std::vector<Vector3> vertexList(vertexCount);
 	auto minX = std::numeric_limits<float>::max();
 	auto minY = std::numeric_limits<float>::max();

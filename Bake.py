@@ -14,5 +14,6 @@ for path, subdirs, files in os.walk(os.curdir):
         new_file_path = file_path.replace('ModelNet40', f'ModelNet40-path-{num_layer}').replace('.off', '.path')
         os.makedirs(new_file_path.rsplit('\\', 1)[0], exist_ok=True)
         if os.path.isfile(new_file_path):
-            continue
-        subprocess.run(['./GraphGenerator.exe', file_path, f'{num_layer}', '-p', new_file_path, '-r'])
+            print(new_file_path, 'already exists')
+        else:
+            subprocess.run(['./GraphGenerator.exe', file_path, f'{num_layer}', '-p', new_file_path, '-r'])

@@ -39,7 +39,7 @@ python Bake.py
 ./GraphGenerator.exe <file_path> <layer> [-p <pathgraph_raw_data_output>] [-b <adjacent_matrix_image_path>] [-r]
 ```
 
-1. -p Create pathgraph raw data
-2. -b Create adjacent matrix image
-3. -r Rotate the model to create rotation-invariant data
+- -p Create pathgraph raw data
+- -b Create adjacent matrix image
+- -r Rotate the model to create rotation-invariant data
 

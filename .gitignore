@@ -4,6 +4,6 @@
 build
 Tests
 Dataset
+!Dataset\metadata_modelnet40.csv
 SavedData
-Visualizer
 SavedPretrainedModel
